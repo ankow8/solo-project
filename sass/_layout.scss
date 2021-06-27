@@ -2,20 +2,36 @@ body {
   margin: 0;
   max-width: 1280px;
   background-color: $background-color;
-  height: 100%;
+  height: 100vs;
+  font-family: $sidebar-font;
+  color: $font-grey;
+}
+
+button.refresh {
+  padding-top: 4px;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border: 0;
+  background-color: $background-button;
+  img {
+    height: 60%;
+    width: 60%;
+    filter: invert(100%);
+  }
 }
 
 .container-site {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: 100vs;
     .col-2 {
-      flex: 25%;
-      height: 100%;
+      flex: 20%;
+      height: 100vs;
     }
     .col-10 {
-      flex: 75%;
-      height: 100%;
+      flex: 80%;
+      height: 100vs;
     }
 }
 
@@ -97,14 +113,16 @@ body {
 .navigation-bar {
   font-family: $sidebar-font;
   height: 60px;
-  border: 1px groove;
+  border: 1px solid;
+  border-color: $border-color;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   background-color: $nav-background;
   .cash {
-    border-left: 1px groove;
+    border-left: 1px solid;
+    border-color: $border-color;
     padding: 0 20px;
     height: 100%;
     color: $font-grey;
@@ -131,7 +149,8 @@ body {
   }
   .notification {
     padding: 0 20px;
-    border-left: 1px groove;
+    border-left: 1px solid;
+    border-color: $border-color;
     height: 100%;
     display: flex;
     align-items: center;
@@ -152,7 +171,8 @@ body {
   }
   .login {
     padding: 0 20px;
-    border-left: 1px groove;
+    border-left: 1px solid;
+    border-color: $border-color;
     height: 100%;
     font-weight: 13px;
     display: flex;
@@ -170,5 +190,81 @@ body {
       text-transform: capitalize;
       font-size: 13px;
     }
+  }
+}
+
+.container-article {
+  width: auto;
+  height: auto;
+  background: $nav-background;
+  margin: 20px;
+  box-shadow: -0px -0px 20px -8px;
+  .title {
+    padding: 1px 0 0 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .chart {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.date-range {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  form {
+    margin-right: 10px;
+    fieldset {
+      border: 1px solid;
+      border-color: $border-color;
+      padding: 7px;
+      input {
+        border: 0;
+      }
+      .first-date {
+        border-right: 1px solid;
+        border-color: $border-color;
+      }
+    }
+  }
+}
+
+.row {
+  padding: 40px 20px;
+  border-top: 1px solid;
+  border-color: $border-color;
+}
+
+.statistics-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .stat-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-color: $border-color;
+    max-width: 40%;
+    flex: 50%;
+    padding: 16px 0 8px;
+    .stat-name {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    .stat-count {
+      color: $font-dark;
+    }
+  }
+}
+
+.statistics {
+  padding: 40px;
+  p {
+    text-transform: capitalize;
+    font-weight: bold;
   }
 }
