@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  max-width: 1280px;
+  background-color: $background-color;
+  height: 100%;
+}
+
+.container-site {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+    .col-2 {
+      flex: 25%;
+      height: 100%;
+    }
+    .col-10 {
+      flex: 75%;
+      height: 100%;
+    }
+}
+
+.sidebar {
+  background-color: $sidebar-background;
+  color: #fff;
+  height: 100%;     //potrzeba tu wysokosci na cala wysokosc przegladarki
+  .menu, .manager {
+    padding: 15px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  .menu {
+    border-bottom: 1px groove;
+  }
+}
+
+.logo-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      font-family: $sidebar-font;
+      text-transform: capitalize;
+      margin-top: 22px;
+      font-size: 14px;
+      a {
+        text-decoration: none;
+        color: $font-color;
+        opacity: 0.6;
+      }
+      img {
+        width: 15px;  //do poprawy wyrównanie pionowe ikony oraz tekstu w linii oraz jednakowy rozmiar ikon
+        height: 15px;
+        filter: invert(100%);
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.manager {
+  font-family: $sidebar-font;
+  h3 {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .mgr-profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .mgr-photo {
+      position: relative;
+      .available-point {
+        position: absolute;
+        right: -1px;
+        top: -1px;
+      }
+    }
+    .mgr-name {
+      margin-left: 10px;
+      color: $font-blue;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Navigation */
+
+.navigation-bar {
+  font-family: $sidebar-font;
+  height: 60px;
+  border: 1px groove;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $nav-background;
+  .cash {
+    border-left: 1px groove;
+    padding: 0 20px;
+    height: 100%;
+    color: $font-grey;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .wallet {
+      opacity: 0.6;
+      margin: 0 10px;
+      height: 18px;
+      width: 18px;
+    }
+    .arrow-down {
+      opacity: 0.6;
+      display: flex;
+      top: -3px;
+      margin: 0 10px;
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .notification {
+    padding: 0 20px;
+    border-left: 1px groove;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .bell {
+
+      position: relative;
+      height: 20px;
+      width: 20px;
+      .status {
+        position: absolute;
+        right: 0px;
+        top: -8px
+      }
+      .bell-img {
+        opacity: 0.6;
+      }
+    }
+  }
+  .login {
+    padding: 0 20px;
+    border-left: 1px groove;
+    height: 100%;
+    font-weight: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    .log-avatar {
+      margin: 0 10px 0 0;
+      height: 20px;
+      width: 20px;
+      opacity: 0.6;
+    }
+    .profile-name {
+      color: $font-blue;
+      text-transform: capitalize;
+      font-size: 13px;
+    }
+  }
+}
