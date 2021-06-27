@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  max-width: 1280px;
+  //max-width: 1280px;
   background-color: $background-color;
   height: 100vs;
   font-family: $sidebar-font;
@@ -21,6 +21,15 @@ button.refresh {
   }
 }
 
+button.add-new {
+  background-color: $background-button;
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  color: $font-color;
+}
+
 .container-site {
   display: flex;
   flex-wrap: wrap;
@@ -39,31 +48,43 @@ button.refresh {
   background-color: $sidebar-background;
   color: #fff;
   height: 100%;     //potrzeba tu wysokosci na cala wysokosc przegladarki
-  .menu, .manager {
+  .menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .manager {
     padding: 15px;
     padding-left: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
   }
   .menu {
     border-bottom: 1px groove;
+    border-color: $font-grey;
   }
 }
 
 .logo-menu {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  .menu-hamburger {
+    &:hover {
+      // do uzupelnienia
+    }
+  }
 }
 
 .menu-list {
   ul {
     padding: 0;
+    margin-top: 0;
     li {
       list-style-type: none;
       font-family: $sidebar-font;
       text-transform: capitalize;
-      margin-top: 22px;
+      padding: 12px 20px 12px 20px;
       font-size: 14px;
       a {
         text-decoration: none;
@@ -75,6 +96,15 @@ button.refresh {
         height: 15px;
         filter: invert(100%);
         margin-right: 15px;
+      }
+      &:hover {
+        background-color: $sidebar-hover;
+        border-left: 4px solid;
+        border-color: $background-button;
+        padding-left: 16px;
+        a {
+          opacity: 1;
+        }
       }
     }
   }
@@ -199,6 +229,7 @@ button.refresh {
   background: $nav-background;
   margin: 20px;
   box-shadow: -0px -0px 20px -8px;
+  padding-bottom: 20px;
   .title {
     padding: 1px 0 0 20px;
     text-transform: uppercase;
@@ -217,10 +248,12 @@ button.refresh {
   align-items: center;
   form {
     margin-right: 10px;
+    height: 40px;
     fieldset {
       border: 1px solid;
       border-color: $border-color;
-      padding: 7px;
+      border-radius: 5px;
+      padding: 8px;
       input {
         border: 0;
       }
@@ -233,7 +266,7 @@ button.refresh {
 }
 
 .row {
-  padding: 40px 20px;
+  padding: 20px 20px;
   border-top: 1px solid;
   border-color: $border-color;
 }
@@ -266,5 +299,66 @@ button.refresh {
   p {
     text-transform: capitalize;
     font-weight: bold;
+  }
+}
+
+.links-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.links-table {
+  ul {
+    max-width: 680px;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      border-top: 1px solid;
+      border-color: $border-color;
+      &:hover {
+        .link-line {
+          .link-actions {
+            .link-links, .link-trash {
+              display: block;
+            }
+          }
+        }
+      }
+      .link-line {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 18px 0;
+        .link-name {
+          font-weight: bold;
+          width: 120px;
+        }
+        .link-page {
+          a {
+            text-decoration: none;
+            width: 200px;
+            display: flex;
+            justify-content: flex-start;
+          }
+        }
+        .link-actions {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          width: 72px;
+          .link-links, .link-trash {
+            display: none;
+            width: 16px;
+            height: 16px;
+            margin-right: 20px;
+            opacity: 0.6;
+          }
+        }
+      }
+      /*li:last-child {             // nie dziala
+        border-bottom: 1px solid;
+      }*/
+    }
   }
 }
