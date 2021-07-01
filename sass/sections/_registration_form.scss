@@ -1,0 +1,25 @@
+/* Sidebar */
+
+.sidebar {
+  height: 100%;
+  width: 188px;
+  position: fixed;
+  margin-top: -80px;
+  z-index: 1;
+}
+
+/* Navigation */
+
+.navigation {
+  position: fixed;
+  margin-top: -80px;
+  margin-left: -188px;
+  width: 100vw;
+}
+
+/* Container */
+
+.container-site {
+  margin-left: 188px;
+  min-width: 768px;
+}
