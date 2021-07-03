@@ -4,22 +4,22 @@
   height: 100%;
   width: 188px;
   position: fixed;
-  margin-top: -80px;
   z-index: 1;
+  top:0;
+  left:0;
 }
 
 /* Navigation */
 
-.navigation {
+nav {
   position: fixed;
-  margin-top: -80px;
-  margin-left: -188px;
-  width: 100vw;
+  top:0;
+  width: 100%;
+  left:0;
 }
 
 /* Container */
 
 .container-site {
-  margin-left: 188px;
   min-width: 768px;
 }
