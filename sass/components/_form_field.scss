@@ -298,6 +298,10 @@ a.link {
   }
 }
 
+.sidebar-nav {
+  padding-top: 10px;
+}
+
 .mgr-profile {
   display: flex;
   flex-wrap: wrap;
@@ -317,13 +321,11 @@ a.link {
   }
 }
 
-
 .container-article {
   margin-top: 80px;
-  width: auto;
   height: auto;
   background: $nav-article-background;
-  margin: 0 20px 20px 20px;
+  margin: 20px;
   box-shadow: 0 0 20px -8px;
   padding-bottom: 20px;
   .title {
@@ -334,6 +336,9 @@ a.link {
   .chart {
     display: flex;
     justify-content: center;
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -343,7 +348,7 @@ a.link {
   justify-content: center;
   align-items: center;
   form {
-    margin-right: 10px;
+    margin: 10px;
     height: 40px;
     fieldset {
       border: 1px solid;
@@ -402,4 +407,47 @@ a.link {
   display: flex;
   justify-content: center;
   margin: 20px;
+}
+
+/* Media */
+
+@media (max-width: 767px) {
+  .statistics-table .stat-line {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .link-line {
+    .link-actions {
+      .link-links, .link-trash {
+        display: block;
+      }
+    }
+  }
+
+  .link-page {
+    order: 3;
+  }
+
+  .link-page {
+    flex: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width:767px) {
+  .sidebar {
+    left: -135px;
+    .logo-menu {
+      padding: 18px 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar-nav {
+    display: block;
+  }
 }

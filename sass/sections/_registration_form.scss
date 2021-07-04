@@ -2,7 +2,7 @@
 
 .sidebar {
   height: 100%;
-  width: 188px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top:0;
@@ -18,8 +18,27 @@ nav {
   left:0;
 }
 
-/* Container */
+/* Media */
 
-.container-site {
-  min-width: 768px;
+@media (max-width:767px) {
+  .sidebar {
+    left: -135px;
+    .logo-menu {
+      padding: 18px 14px;
+    }
+  }
+  .container-site {
+    position: absolute;
+    left: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    display: none;
+  }
+  .container-site {
+    position: absolute;
+    top: 0;
+  }
 }
