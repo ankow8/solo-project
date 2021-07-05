@@ -7,6 +7,7 @@
   z-index: 1;
   top:0;
   left:0;
+  transition: $transition-speed;
 }
 
 /* Navigation */
@@ -16,6 +17,7 @@ nav {
   top:0;
   width: 100%;
   left:0;
+  transition: $transition-speed;
 }
 
 /* Media */
@@ -23,22 +25,31 @@ nav {
 @media (max-width:767px) {
   .sidebar {
     left: -135px;
+    transition: $transition-speed;
     .logo-menu {
       padding: 18px 14px;
     }
   }
   .container-site {
     position: absolute;
+    top: 0;
     left: 45px;
+    transition: $transition-speed;
+
+  }
+  nav {
+    display: none;
+    transition: $transition-speed;
   }
 }
 
 @media (max-width: 767px) {
-  nav {
-    display: none;
+  .show-sidebar {
+    left: 0;
+    transition: $transition-speed;
   }
-  .container-site {
-    position: absolute;
-    top: 0;
+  .show-container {
+    left: 180px;
+    transition: $transition-speed;
   }
 }

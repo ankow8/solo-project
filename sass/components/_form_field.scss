@@ -426,28 +426,15 @@ a.link {
       }
     }
   }
-
   .link-page {
     order: 3;
-  }
-
-  .link-page {
     flex: 100%;
     margin-top: 10px;
   }
 }
 
 @media (max-width:767px) {
-  .sidebar {
-    left: -135px;
-    .logo-menu {
-      padding: 18px 14px;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .sidebar-nav {
-    display: block;
+  .logo-menu {
+    padding: 18px 14px;
   }
 }
