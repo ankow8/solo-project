@@ -31,12 +31,12 @@ nav {
     }
   }
 
-  .container-site {
+  /*.container-site {
     position: absolute;
     top: 0;
     left: 45px;
     transition: $transition-speed;
-  }
+  }*/
 
   nav {
     display: none;
@@ -50,7 +50,7 @@ nav {
     transition: $transition-speed;
   }
   .show-container {
-    left: 180px;
+    padding: 0 0 0 180px;
     transition: $transition-speed;
   }
 }

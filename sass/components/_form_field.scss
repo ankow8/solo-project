@@ -357,7 +357,7 @@ a.link {
       border-radius: 5px;
       padding: 8px;
       input {
-        border: 0;
+        border: 1px;
       }
       .first-date {
         border-right: 1px solid;
@@ -505,4 +505,8 @@ i.fas.fa-door-open {
   .row {
     padding: 20px 20px;
   }
+}
+
+@media (max-width: 552px) {
+
 }
