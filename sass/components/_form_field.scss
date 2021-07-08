@@ -350,14 +350,14 @@ a.link {
   align-items: center;
   form {
     margin: 10px;
-    height: 40px;
+    min-height: 40px;
     fieldset {
       border: 1px solid;
       border-color: $border-color;
       border-radius: 5px;
       padding: 8px;
       input {
-        border: 1px;
+        border: 0;
       }
       .first-date {
         border-right: 1px solid;
@@ -507,6 +507,33 @@ i.fas.fa-door-open {
   }
 }
 
-@media (max-width: 552px) {
+@media (max-width: 767px) {
+  .date-range {
+    flex-direction: column;
+    form {
+      max-width: 200px;
+    }
+    button {
+      width: 200px;
+      img {
+        height: 20px;
+      }
+    }
+  }
 
+  input.first-date, input.last-date {
+    width: 100%;
+    margin: 4px 0;
+  }
+  .date-range form fieldset {
+    .first-date {
+      border-right: 0;
+      border-bottom: 1px solid;
+      border-color: $border-color;
+    }
+    .last-date {
+      border-bottom: 1px solid;
+      border-color: $border-color;
+    }
+  }
 }

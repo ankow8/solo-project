@@ -31,13 +31,6 @@ nav {
     }
   }
 
-  /*.container-site {
-    position: absolute;
-    top: 0;
-    left: 45px;
-    transition: $transition-speed;
-  }*/
-
   nav {
     display: none;
     transition: $transition-speed;
@@ -47,10 +40,6 @@ nav {
 @media (max-width: 767px) {
   .show-sidebar {
     left: 0;
-    transition: $transition-speed;
-  }
-  .show-container {
-    padding: 0 0 0 180px;
     transition: $transition-speed;
   }
 }
